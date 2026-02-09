@@ -2,12 +2,13 @@ import pygame
 from plateau import *
 from pieces import *
 from jeu import *
+from affichage.interface import *
 
 pygame.init()
 
 temps = pygame.time.Clock()
 pygame.display.set_caption('CHESS') # Titre de la fenêtre
-Win = pygame.display.set_mode((largeur, hauteur))
+ecran = pygame.display.set_mode((largeur, hauteur))
 
 
 def main():
@@ -43,3 +44,8 @@ def main():
                         selected_square = None
                         valid_moves = []
                         game_over = False
+        
+            dessiner_plateau(ecran, image_plateau)
+            dessiner_pieces(ecran, jeu.plateau, images_pieces)
+
+            pygame.display.flip()
