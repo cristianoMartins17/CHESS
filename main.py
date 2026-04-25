@@ -1,6 +1,6 @@
 import pygame
 from plateau import *
-from pieces import *
+from piece import *
 from jeu import *
 from affichage.interface import *
 

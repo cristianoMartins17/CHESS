@@ -1,11 +1,11 @@
 # Initialise le plateau de jeu (grille + pièces)
-from pieces import Pion, Tour, Cavalier, Fou, Dame, Roi
+from piece import Pion, Tour, Cavalier, Fou, Dame, Roi
 
 largeur, hauteur = 760, 760
 lignes, colonnes = 8,8
 carre = largeur // lignes
 
-Brun = (87, 16, 16)
+Noir = (87, 16, 16)
 Blanc = (245, 245, 220)
 
 class plateau :
