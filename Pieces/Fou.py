@@ -1,8 +1,9 @@
-from Pieces import Piece
+from Pieces.Piece import Piece
 
 class Fou(Piece):
     def __init__(self, couleur):
         super().__init__(couleur)
+        self.symbole = 'F' if couleur == 'blanc' else 'f'
     
     def mouvements_valides(self, position, plateau):
         mouvements = []

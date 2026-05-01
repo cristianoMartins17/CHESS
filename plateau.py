@@ -1,5 +1,10 @@
 # Initialise le plateau de jeu (grille + pièces)
-from piece import Pion, Tour, Cavalier, Fou, Dame, Roi
+from Pieces.Pion import Pion
+from Pieces.Tour import Tour
+from Pieces.Cavalier import Cavalier
+from Pieces.Fou import Fou
+from Pieces.Dame import Dame
+from Pieces.Roi import Roi
 
 largeur, hauteur = 760, 760
 lignes, colonnes = 8,8
@@ -8,7 +13,7 @@ carre = largeur // lignes
 Noir = (87, 16, 16)
 Blanc = (245, 245, 220)
 
-class plateau :
+class Plateau :
     def __init__(self):
         self.grid = [[None for _ in range(8)] for _ in range(8)]
         self.echequier = [
@@ -42,4 +47,4 @@ class plateau :
         self.echequier[position[0]][position[1]] = None
     
 
-        
+    

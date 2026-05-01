@@ -1,8 +1,9 @@
-from Pieces import Piece
+from Pieces.Piece import Piece
 
 class Roi(Piece):
     def __init__(self, couleur):
         super().__init__(couleur)
+        self.symbole = 'R' if couleur == 'blanc' else 'r'
 
     def est_en_echec(self, position, couleur_roi):
         for ligne in self.grille:

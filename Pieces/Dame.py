@@ -1,8 +1,9 @@
-from Pieces import Piece
+from Pieces.Piece import Piece
 
 class Dame(Piece):
     def __init__(self, couleur):
         super().__init__(couleur)
+        self.symbole = 'D' if couleur == 'blanc' else 'd'
     
     def mouvements_valides(self, position, plateau):
         mouvements = []

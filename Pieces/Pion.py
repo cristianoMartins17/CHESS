@@ -1,8 +1,9 @@
-from Pieces import Piece
+from Pieces.Piece import Piece
 
 class Pion(Piece):
     def __init__(self, couleur):
         super().__init__(couleur)
+        self.symbole = 'P' if couleur == 'blanc' else 'p'
     
     def mouvements_valides(self, position, plateau):
         mouvements = []

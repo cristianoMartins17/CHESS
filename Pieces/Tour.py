@@ -1,8 +1,9 @@
-from Pieces import Piece
+from Pieces.Piece import Piece
 
 class Tour(Piece):
     def __init__(self, couleur):
         super().__init__(couleur)
+        self.symbole = 'T' if couleur == 'blanc' else 't'
     
     def mouvements_valides(self, position, plateau):
         mouvements = []
