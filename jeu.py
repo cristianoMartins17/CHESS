@@ -3,7 +3,7 @@ from plateau import Plateau
 class jeu:
 	def __init__(self):
 		self.plateau = Plateau()
-		self.tour = 0 # 0 pour blanc, 1 pour noir
+		self.tour = "blanc" # blanc ou noir
 		self.selection = None # Carré sélectionné (ligne, colonne)
 		self.coups_valides = [] # Liste des coups valides pour la pièce sélectionnée
 		self.partie_terminee = False
@@ -11,7 +11,7 @@ class jeu:
   
 	def reinitialiser(self):
 		self.plateau = Plateau()
-		self.tour = 0 # 0 pour blanc, 1 pour noir
+		self.tour = "blanc" # blanc ou noir
 		self.selection = None # Carré sélectionné (ligne, colonne)
 		self.coups_valides = [] # Liste des coups valides pour la pièce sélectionnée
 		self.partie_terminee = False
@@ -43,16 +43,10 @@ class jeu:
 		return True
 
 	def changer_tour(self):
-		if self.tour == 0:
-			self.tour = 1
+		if self.tour == "blanc":
+			self.tour = "noir"
 		else:
-			self.tour = 0
+			self.tour = "blanc"
    
-	def verifier_fin_partie(self):
-		if self.plateau.roi_capture("blanc"):
-			self.partie_terminee = True
-			self.gagnant = "noir"
-		elif self.plateau.roi_capture("noir"):
-			self.partie_terminee = True
-			self.gagnant = "blanc"
+	
 
