@@ -46,5 +46,7 @@ class Plateau :
     def supprimer_piece(self, position):                # Supprime la pièce à la position donnée (sers pour les captures spéciales)
         self.echequier[position[0]][position[1]] = None
     
+    def get_echequier(self):
+        return self.echequier
 
     

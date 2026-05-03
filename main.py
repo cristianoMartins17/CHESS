@@ -13,7 +13,28 @@ ecran = pygame.display.set_mode((largeur, hauteur))
 
 
 def main():
-    afficher_plateau_console(Plateau())
+    plateau = Plateau()
+
+    print("\nPlateau avant déplacement :")
+    afficher_plateau_console(plateau)
+
+    # Déplacement du pion blanc
+    plateau.deplacer_piece((6, 0), (5, 0))
+
+    print("\nPlateau après déplacement :")
+    afficher_plateau_console(plateau)
+
+    # Vérifications
+    depart = plateau.get_piece((6, 0))
+    arrivee = plateau.get_piece((5, 0))
+
+    if depart is None and arrivee is not None:
+        print("✅ Déplacement fonctionnel")
+    else:
+        print("❌ Erreur déplacement")
+
+    
+
     # run = True
     # FPS = 60
     # while run :

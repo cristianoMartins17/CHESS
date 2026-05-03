@@ -7,7 +7,7 @@ class Pion(Piece):
     
     def mouvements_valides(self, position, plateau):
         mouvements = []
-        direction = 1 if self.couleur == 'blanc' else -1  # Les pions blancs avancent vers le haut, les noirs vers le bas
+        direction = -1 if self.couleur == 'blanc' else 1  # Les pions blancs sont en haut (direction -1) et les pions noirs sont en bas (direction +1)
         new_x = position[0] + direction
         new_y = position[1]
         

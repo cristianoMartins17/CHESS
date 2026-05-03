@@ -2,9 +2,9 @@ from plateau import *
 
 def afficher_plateau_console(plateau):
     y = 8  # Numéro de ligne initial (commence à 8 pour correspondre à l'affichage traditionnel du plateau d'échecs)
-    for ligne in plateau.echequier:
+    for ligne in plateau.get_echequier():
         print(y, end=" ") 
-        for piece in ligne: # numéros de lignes
+        for piece in ligne: 
             if piece is None:
                 print(".", end=" ")  # Affiche un point pour les cases vides
             else:
